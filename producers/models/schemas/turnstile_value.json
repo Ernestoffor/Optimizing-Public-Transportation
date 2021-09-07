@@ -1,0 +1,10 @@
+{
+   "name": "turnsile_value",
+    "namespace": "udacity.com",
+    "type": "record",
+    "fields": [
+        {"name": "station_id", "type": "int"},
+        {"name": "station_name", "type": "string"},
+        {"name": "line", "type": "string"}
+    ]
+}
