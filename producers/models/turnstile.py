@@ -31,7 +31,7 @@ class Turnstile(Producer):
 # Giving a topic name
         
         super().__init__(
-            topic_name="StationTurnstile", 
+            topic_name="station_turnstile", 
             key_schema=Turnstile.key_schema,
             value_schema=Turnstile.value_schema, 
              num_partitions= 1,
