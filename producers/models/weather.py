@@ -73,8 +73,8 @@ class Weather(Producer):
             headers={"Content-Type": "application/vnd.kafka.avro.v2+json"},
            data=json.dumps(
              { 
-           "key_schema": Weather.key_schema,
-            "value_schema": Weather.value_schema ,
+           "key_schema": json.dumps(Weather.key_schema),
+            "value_schema": json.dumps(Weather.value_schema),
             "records": [{
                 "value": {
                         "temperature": (self.temp),
@@ -87,11 +87,10 @@ class Weather(Producer):
         
         try:
             resp.raise_for_status()
-        #except Exception e:
-        except:
-            print(f"Failed to send data to REST Proxy {json.dumps(resp.json(), indent=2)}")
+        except Exception as e:
+            print(f"Failed to send data to REST Proxy with error {json.dumps(resp.json(e), indent=2)}")
 
         logger.debug(
-            "sent weather data to kafka, temp: %s, status: s", 
+            "sent weather data to kafka, temp: %s, status: %s", 
             self.temp, 
             self.status.name, )

@@ -143,3 +143,11 @@ Once the simulation is running, you may hit `Ctrl+C` at any time to exit.
 5. `python server.py`
 
 Once the server is running, you may hit `Ctrl+C` at any time to exit.
+
+### Author(s)
+Ernest Offor Ugwoke
+### Previous work
+[US Immigrants Data](https://github.com/Ernestoffor/usa_immigrants_truth_table)
+
+#### Acknowledgement
+The author thanks [Udacity data team](www.udacity.com) for the project proposal and supervision. 
